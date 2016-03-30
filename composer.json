@@ -1,0 +1,17 @@
+{
+    "name": "axelpal/phpbu-yandex-disk",
+    "description": "phpbu Yandex.Disk implementation",
+    "type": "library",
+    "require": {
+        "phpbu/phpbu": "^3.1",
+        "arhitector/yandex": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AxelPAL",
+            "email": "axelpal@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

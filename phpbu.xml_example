@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpbu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://schema.phpbu.de/3.1/phpbu.xsd"
+       verbose="true">
+
+    <logging>
+        <log type="json" target="logfile.json"/>
+    </logging>
+
+    <backups>
+        <backup>
+            <source type="mysqldump">
+                <option name="databases" value="dbname"/>
+                <option name="user" value="username"/>
+                <option name="password" value="password"/>
+            </source>
+            <target dirname="backup" filename="mysqldump-%Y%m%d-%H%i.tar" compress="bzip2"/>
+            <sync type="yandex.disk">
+                <option name="token" value="YANDEX_API_TOKEN"/>
+                <option name="path" value="YANDEX_DISK_PATH"/>
+            </sync>
+        </backup>
+        <backup>
+            <source type="tar">
+                <option name="path" value="/tmp/root"/>
+            </source>
+
+            <target dirname="backup" filename="files-%Y%m%d-%H%i.tar" compress="bzip2"/>
+            <sync type="yandex.disk">
+                <option name="token" value="YANDEX_API_TOKEN"/>
+                <option name="path" value="YANDEX_DISK_PATH"/>
+            </sync>
+        </backup>
+    </backups>
+</phpbu>
