@@ -37,6 +37,7 @@ create your app
 - generate access token:
 
 1) Goto https://oauth.yandex.ru/authorize?response_type=token&client_id=APP_ID (replace APP_ID with ID giving to you)
+
 2) Then you should get token parameter from GET-parameters of opened page
 
 Other documentation you can find in:
