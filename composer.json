@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "phpbu/phpbu": "^3.1",
-        "arhitector/yandex": "dev-master"
+        "arhitector/yandex": "^1.2"
     },
     "license": "MIT",
     "authors": [
